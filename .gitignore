@@ -1,0 +1,13 @@
+/web/bundles/*
+/app/bootstrap*
+/app/bootstrap.php.cache
+/app/cache/*
+/app/logs/*
+/vendor/*
+
+*~
+.DS_Store
+.project
+.buildpath
+.settings/*
+*.cache
