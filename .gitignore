@@ -12,3 +12,4 @@
 .buildpath
 .settings/*
 *.cache
+*.sqlite
