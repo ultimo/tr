@@ -1,0 +1,3 @@
+[submodule "src/IHQS/ContactBundle"]
+	path = src/IHQS/ContactBundle
+	url = git://github.com/ihqs/ContactBundle.git
