@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -53,3 +53,19 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+ihqs_contact:
+    contact:
+        form:
+            type:               ihqs_contact_contact
+            handler:            ihqs_contact.contact.form.handler.default
+            name:               ihqs_contact_contact_form
+            validation_groups:  [Contact]
+    form: ~                                 
+    model: ~                                
+    connectors:                             
+        email:                              
+            recipients: "%contact_recipient%"
+        database:                           
+            db_driver: orm                  
+        file: ~                             
