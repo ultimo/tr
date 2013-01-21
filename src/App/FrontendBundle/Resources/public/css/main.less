@@ -1,1 +1,134 @@
+@import "elements.less";
 
+@font-face {
+  font-family: 'Coda';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Coda'), local('Coda-Regular'), url(http://themes.googleusercontent.com/static/fonts/coda/v7/4Jb-FkcfQYfqLngSPKT1r_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+@dark: #333;
+@orange: rgba(225, 112, 75, 0.95);
+@blue: #0E90D2;
+
+body {
+	font-family: 'Coda', arial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+nav.navbar  {
+	.btn {
+		margin-top: 15px;
+	}
+	.brand {
+		line-height: 38px;
+		font-size: 20px;
+		margin-left: 0px;
+		border-bottom: 2px solid @orange;
+		font-weight: normal;
+		color: #fff;
+	}
+	.navbar-inner {
+		min-height: 60px;
+		.opacity (0.85);
+		background: black;
+		li {
+			line-height: 40px;
+			text-transform: uppercase;
+		}
+		.active > a {
+				.inner-shadow (0,0,0,0);
+				background: transparent;
+				color: @blue;
+			&:hover {
+				.inner-shadow (0,0,0,0);
+				background: transparent;
+				color: @orange;
+			}
+		}
+		a:hover {
+			color: @orange;
+		}
+	}
+}
+
+section {
+	padding-top: 60px;
+	margin-bottom: 80px;
+}
+
+#home {
+	min-height: 680px;
+	height: 1500px;
+	background: url(/bundles/appfrontend/images/bg4.jpg) no-repeat center -200px;
+	position: relative;
+	.page-header {
+		border-color: @orange;
+		position: absolute;
+		background-color: transparent;
+		color: white;
+		bottom: 20px;
+		.opacity(0);
+	}
+}
+
+.no-js #home {
+	height: 700px;
+	.page-header {
+		.opacity(1);
+	}
+}
+
+ #about {
+ 	.well {
+		background-color: @orange;
+		color: white;
+		margin-top:20px;
+	}
+	h2 {
+		background: @dark;
+		text-transform: uppercase;
+		text-align: center;
+		margin: -30px auto 0;
+		line-height: 40px;
+		width: 200px;
+		.rounded(4px);
+	}
+}
+
+#toolbelt {
+	ul {
+		margin-top: 50px;
+	}
+	li {
+		background: url(/bundles/appfrontend/images/tools.png) no-repeat;
+		.opacity(0.3);
+		.transition(0.5s, opacity);
+		&:hover {
+			.opacity(1);
+		}
+		span {
+			display: block;
+			height: 70px;
+			width: 70px;
+			.rounded(35px);
+			.inner-shadow();
+			cursor: pointer;
+		}
+	}
+}
+
+#portfolio {
+	h2 {
+		color: white;
+	}
+	.well {
+		background-color: @dark;
+	}
+	.caption {
+		background-color: #fff;
+	}
+}
