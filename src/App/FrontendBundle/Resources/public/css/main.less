@@ -10,6 +10,7 @@
 @dark: #333;
 @orange: rgba(225, 112, 75, 0.95);
 @blue: #0E90D2;
+@green: #468847;
 
 body {
 	font-family: 'Coda', arial;
@@ -63,7 +64,7 @@ section {
 #home {
 	min-height: 680px;
 	height: 1500px;
-	background: url(/bundles/appfrontend/images/bg4.jpg) no-repeat center -200px;
+	background: url(/bundles/appfrontend/images/basel.jpg) no-repeat center -200px;
 	position: relative;
 	.page-header {
 		border-color: @orange;
@@ -104,20 +105,106 @@ section {
 		margin-top: 50px;
 	}
 	li {
-		background: url(/bundles/appfrontend/images/tools.png) no-repeat;
-		.opacity(0.3);
-		.transition(0.5s, opacity);
-		&:hover {
-			.opacity(1);
-		}
 		span {
+			background-image: url(/bundles/appfrontend/images/tools.png);
+			background-repeat: no-repeat;
 			display: block;
+			margin: 0 auto;
 			height: 70px;
 			width: 70px;
 			.rounded(35px);
 			.inner-shadow();
 			cursor: pointer;
+			.opacity(0.3);
+			.transition(0.5s, opacity);
+			&:hover {
+				.opacity(1);
+			}
 		}
+	}
+}
+
+.sf2 {
+	background-position: 0 -70px;
+	&:hover {
+		background-position: 0 0;
+	}
+}
+
+.sencha {
+	background-position: -70px -70px;
+	&:hover {
+		background-position: -70px 0;
+	}
+}
+
+.jquery {
+	background-position: -140px -70px;
+	&:hover {
+		background-position: -140px 0;
+	}
+}
+
+.less {
+	background-position: -210px -70px;
+	&:hover {
+		background-position: -210px 0;
+	}
+}
+
+.html5bp {
+	background-position: -280px -70px;
+	&:hover {
+		background-position: -280px 0;
+	}
+}
+
+.bootstrap {
+	background-position: -350px -70px;
+	&:hover {
+		background-position: -350px 0;
+	}
+}
+
+.webkit {
+	background-position: -420px -70px;
+	&:hover {
+		background-position: -420px 0;
+	}
+}
+
+.photoshop {
+	background-position: -490px -70px;
+	&:hover {
+		background-position: -490px 0;
+	}
+}
+
+.macosx {
+	background-position: -560px -70px;
+	&:hover {
+		background-position: -560px 0;
+	}
+}
+
+.coffee {
+	background-position: -630px -70px;
+	&:hover {
+		background-position: -630px 0;
+	}
+}
+
+.dumbbells {
+	background-position: -700px -70px;
+	&:hover {
+		background-position: -700px 0;
+	}
+}
+
+.ktm {
+	background-position: -770px -70px;
+	&:hover {
+		background-position: -770px 0;
 	}
 }
 
@@ -130,5 +217,110 @@ section {
 	}
 	.caption {
 		background-color: #fff;
+	}
+	.img {
+		overflow: hidden;
+	}
+	img {
+		.zoom(1.1, 0.5s);
+	}
+}
+
+#contact {
+	.span8 {
+		font-size: 30px;
+		margin-top: 20px;
+		color: @green;
+	}
+	form {
+		font-size: 14px;
+		margin-top: -30px;
+		color: @dark;
+	}
+	legend {
+		display: none;
+	}
+	.submit {
+		float: right;
+		margin-right: 7%;
+	}
+}
+.control-group {
+	width: 33%;
+	margin: 0;
+	float: left;
+	margin-top: 20px;
+	input {
+		width: 80%;
+	}
+}
+#ihqs_contact_contact_form_message_control_group {
+	width: 100%;
+	textarea {
+		width: 92%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
+	.nav-collapse {
+		width: 100%;
+		.nav > li {
+			width: 50%;
+			float: left;
+			> a {
+				line-height: normal;
+			}
+		}
+	}
+	#home {
+		min-height: 200px;
+		padding-top: 0px;
+		margin-top: 0px;
+	}
+}
+
+@media (max-width: 767px), {
+	.nav-collapse {
+		width: 100%;
+		.nav > li {
+			width: 50%;
+			float: left;
+			> a {
+				line-height: normal;
+			}
+		}
+	}
+	section {
+		margin-bottom: 0px;
+		padding-top: 0px;
+	}
+	#home {
+		min-height: 150px;
+		height: auto !important;
+		background: transparent;
+		padding-top: 60px;
+		.page-header {
+			border-color: @orange;
+			position: absolute;
+			background-color: transparent;
+			color: @dark;
+			bottom: 20px;
+			.opacity(0);
+		}
+	}
+	#toolbelt {
+		.span1 {
+			width: 70px;
+			margin-left: 5px;
+			float: left;
+		}
+	}
+	#portfolio {
+		.img {
+			display: none;
+		}
 	}
 }

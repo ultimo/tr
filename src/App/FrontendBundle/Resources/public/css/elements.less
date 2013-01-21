@@ -154,3 +154,17 @@
   -webkit-background-clip: @argument;
   background-clip: @argument;
 }
+
+.zoom(@scale:2, @speed:.3s){ 
+  -webkit-transition: all @speed ease-out; 
+  -moz-transition: all @speed ease-out; 
+  -o-transition: all @speed ease-out; 
+  transition: all @speed ease-out;
+  &:hover {
+    -moz-transform: scale(@scale);
+    -webkit-transform: scale(@scale);
+    -o-transform: scale(@scale);
+    transform: scale(@scale);
+    -ms-transform: scale(@scale);
+  }
+}
