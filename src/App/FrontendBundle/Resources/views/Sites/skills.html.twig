@@ -1,0 +1,30 @@
+{% set skills = [
+    { 'name': 'HTML5', 'percent': '85'},
+    { 'name': 'CSS3', 'percent': '90'}, 
+    { 'name': 'Javascript', 'percent': '70'},
+    { 'name': 'PHP', 'percent': '80'},
+    { 'name': 'MySQL', 'percent':  '40'},
+    { 'name': 'Photoshop', 'percent':  '75'},
+    { 'name': 'Illustrator', 'percent':  '30'},
+    { 'name': 'InDesign', 'percent':  '35'}
+] %}
+<div class="container">
+    <h2>Skills</h2>
+    <div class="row">
+        <div class="span6">
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        </div>
+        <div class="span6">
+            {% for skill in skills %}
+            <div class="row">
+                <div class="span1">{{ skill.name }}</div>
+                <div class="span5">
+                    <div class="progress">
+                        <div class="bar" data-width="{{ skill.percent }}" style="width: {{ skill.percent }}%;"></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
