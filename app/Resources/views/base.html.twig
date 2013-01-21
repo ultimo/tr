@@ -13,6 +13,7 @@
 
         {% stylesheets filter='less,cssrewrite,?yui_css' output='css/bootstrap.css'
            '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
+           '@MopaBootstrapBundle/Resources/bootstrap/less/responsive.less'
         %}
             <link href="{{ asset_url }}" rel="stylesheet" />
         {% endstylesheets %}
