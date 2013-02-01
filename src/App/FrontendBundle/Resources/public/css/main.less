@@ -11,6 +11,7 @@
 @orange: rgba(225, 112, 75, 0.95);
 @blue: #0E90D2;
 @green: #468847;
+@error: #B94A48;
 
 body {
 	font-family: 'Coda', arial;
@@ -227,37 +228,20 @@ section {
 }
 
 #contact {
-	.span8 {
-		font-size: 30px;
-		margin-top: 20px;
-		color: @green;
-	}
 	form {
-		font-size: 14px;
-		margin-top: -30px;
-		color: @dark;
+		padding-top: 12px;
 	}
-	legend {
-		display: none;
-	}
-	.submit {
-		float: right;
-		margin-right: 7%;
-	}
-}
-.control-group {
-	width: 33%;
-	margin: 0;
-	float: left;
-	margin-top: 20px;
-	input {
-		width: 80%;
-	}
-}
-#ihqs_contact_contact_form_message_control_group {
-	width: 100%;
+	.input input,
 	textarea {
-		width: 92%;
+		padding: 4px 0;
+		text-indent: 6px;
+		width: 100%;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-bottom: 20px;
+		color: @error;
 	}
 }
 
