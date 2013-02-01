@@ -12,20 +12,12 @@
         <meta name="keywords" content="website design, webdesign, front end developer, frontend developer, website, development, tiziano rullo">
         <meta name="viewport" content="width=device-width">
 
-        {% stylesheets filter='less,cssrewrite,?yui_css' output='css/bootstrap.css'
-           '@MopaBootstrapBundle/Resources/public/less/mopabootstrapbundle.less'
-           '@MopaBootstrapBundle/Resources/bootstrap/less/responsive.less'
-        %}
-            <link href="{{ asset_url }}" rel="stylesheet" />
-        {% endstylesheets %}
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" >
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css" >
         
         {% block stylesheets %}{% endblock %}
 
-        {% javascripts output='js/modernizr.js' 
-            '@MopaBootstrapBundle/Resources/public/js/modernizr-2.5.3-respond-1.1.0.min.js'
-        %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
         {% block head_javascripts %}{% endblock %}
     </head>
@@ -36,26 +28,8 @@
 
         {% block body %}{% endblock %}
 
-        {% javascripts output='js/mopa.js' 
-            '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-transition.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-modal.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-dropdown.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-scrollspy.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-tab.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-tooltip.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-popover.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-alert.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-button.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-collapse.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-carousel.js'
-            '@MopaBootstrapBundle/Resources/bootstrap/js/bootstrap-typeahead.js'
-            '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
-            '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-subnav.js'
-            '@MopaBootstrapBundle/Resources/public/js/html5bp_plugins.js'
-        %}
-<script type="text/javascript" src="{{ asset_url }}"></script>
-{% endjavascripts %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 
         {% block javascripts %}{% endblock %}
 
