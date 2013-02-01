@@ -1,9 +1,7 @@
 {% extends '::base.html.twig' %}
 {% block stylesheets %}
-    {% stylesheets filter='less,cssrewrite,?yui_css' output='css/app.css'
-       '@AppFrontendBundle/Resources/public/css/main.less'
-    %}
-        <link href="{{ asset_url }}" rel="stylesheet" />
+    {% stylesheets '@AppFrontendBundle/Resources/public/css/main.less' filter='less,cssrewrite,?yui_css' output='css/app.css' %}
+    <link href="{{ asset_url }}" rel="stylesheet" />
     {% endstylesheets %}
 {% endblock %}
 
@@ -48,10 +46,11 @@
 
 {% endblock %}
 {% block javascripts %}
-    {% javascripts
-       '@AppFrontendBundle/Resources/public/js/plugins.js'
-       '@AppFrontendBundle/Resources/public/js/main.js'
+    {% javascripts output='js/app.js' filter='?yui_js' 
+        '@AppFrontendBundle/Resources/public/js/smooth-scroll.js'
+        '@AppFrontendBundle/Resources/public/js/waypoints.js'
+        '@AppFrontendBundle/Resources/public/js/main.js'
     %}
-        <script src="{{ asset_url }}"></script>
+        <script src="{{ asset_url }}" type="text/javascript" ></script>
     {% endjavascripts %}
 {% endblock %}
