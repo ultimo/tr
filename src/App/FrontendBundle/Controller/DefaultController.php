@@ -21,12 +21,12 @@ class DefaultController extends Controller
             $form->bindRequest($request);
             if ($form->isValid()) {
                 if ($this->sendEmail($contact)) {
-				    $this->get('session')->setFlash('notice', 'Email sent!');
-				    $this->get('session')->setFlash('status', 'success');
-				} else {
-				    $this->get('session')->setFlash('notice', 'Whoops, something has gone terribly wrong!');
-				    $this->get('session')->setFlash('status', 'error');
-				}
+                    $this->get('session')->setFlash('notice', 'Email sent!');
+                    $this->get('session')->setFlash('status', 'success');
+                } else {
+                    $this->get('session')->setFlash('notice', 'Whoops, something has gone terribly wrong!');
+                    $this->get('session')->setFlash('status', 'error');
+                }
             }
         }
 
