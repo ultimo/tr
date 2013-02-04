@@ -24,7 +24,7 @@
                 </a>
                 <span class="brand">TR</span>
                 <div class="nav-collapse collapse pull-right">
-                    <ul class="nav">
+                    <ul class="nav" role="navigation">
                         {% for nav in sites %}
                             <li {% if loop.index == 1 %}class="active"{% endif %}><a href="#{{ nav }}">{{ nav|capitalize }}</a></li>
                         {% endfor %}
@@ -34,7 +34,7 @@
         </div>
     </nav>
     {% for site in sites %}
-        <section id="{{site}}">
+        <section id="{{site}}" role="{% if  loop.index == 1 %}main{% else %}complementary{% endif %}" >
             {% set  twig =  'AppFrontendBundle:Sites:'~site~'.html.twig'  %}
             {% include twig %}
         </section>
