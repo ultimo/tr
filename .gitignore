@@ -13,3 +13,4 @@
 .settings/*
 *.cache
 *.sqlite
+/sftp-config.json

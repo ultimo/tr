@@ -46,8 +46,11 @@ nav.navbar  {
         font-size: 20px;
         margin-left: 0px;
         border-bottom: 2px solid @orange;
-        font-weight: normal;
-        color: #fff;
+        a {
+            font-weight: normal;
+            color: #fff;
+            text-decoration: none;
+        }
     }
     .navbar-inner {
         min-height: 60px;
@@ -153,6 +156,10 @@ section {
             &:hover {
                 .opacity(1);
             }
+        }
+        position: relative;
+        &:hover {
+            z-index: 2;
         }
     }
 }
@@ -270,7 +277,15 @@ section {
         color: @darkgray;
         background-color: @lightgray;
         h4, a {
-            margin-top: 20px;
+            margin-top: 15px;
+        }
+        a {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+        h3 {
+            line-height: 1;
         }
     }
 }
@@ -322,6 +337,7 @@ section {
     }
 }
 
+/* Tablet */
 @media (min-width: 768px) and (max-width: 979px) {
     .navbar-fixed-top {
         margin-bottom: 0;
@@ -333,6 +349,7 @@ section {
             float: left;
             > a {
                 line-height: normal;
+                text-align: center;
             }
         }
     }
@@ -341,8 +358,14 @@ section {
         padding-top: 0px;
         margin-top: 0px;
     }
+    #portfolio {
+        .span4{
+            width: 352px;
+        }
+    }
 }
 
+/* Phone */
 @media (max-width: 767px), {
     .nav-collapse {
         width: 100%;
@@ -351,6 +374,7 @@ section {
             float: left;
             > a {
                 line-height: normal;
+                text-align: center;
             }
         }
     }
@@ -380,8 +404,13 @@ section {
         }
     }
     #portfolio {
-        .img {
-            display: none;
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .span4 {
+            width: 360px;
+            margin: 0 auto;
         }
     }
 }

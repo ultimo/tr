@@ -49,4 +49,15 @@ $(document).ready(function() {
     }, {
         offset: '60%'
     });
+
+    $("#portfolio a[data-app]").click(function(e) {
+        e.preventDefault();
+        var path = '/bundles/appfrontend/images/portfolio/'+$(this).data('app')+'/';
+        var screens = [];
+        for (var i = 1; i <= 3; i++) {
+            screens.push(path+i+'.jpg');
+        }
+        $.fancybox.open(screens);
+    });
+
 });

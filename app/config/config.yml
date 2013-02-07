@@ -27,6 +27,7 @@ twig:
 assetic:
     debug: %kernel.debug%
     use_controller: false
+    bundles: ["AppFrontendBundle"]
     filters:
         cssrewrite: ~
         less:
