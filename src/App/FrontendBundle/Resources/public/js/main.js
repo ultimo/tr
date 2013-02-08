@@ -28,7 +28,7 @@ $(document).ready(function() {
             $('#about h2').addClass('trigger');
         }
     }, {
-        offset: '80%'
+        offset: '60%'
     });
 
     $('#skills .bar').width(0);
